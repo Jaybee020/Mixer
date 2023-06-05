@@ -20,6 +20,8 @@ The circuit folder contains the circuits used in the mixer.Set the depth of the 
 
 To compile the circuit
 
+-Install circom. Find more info [here](https://docs.circom.io/getting-started/installation/).
+
 - Run `bash scripts/compile.sh`. This also generates the Verifier.sol file. Change the solidity version of the verifier.sol file to 0.8.4. This command also generates a proof generation key called circuit_final.zkey and Withdraw.wasm(in the Withdraw js folder). They should be copied to the frontend code to generate the proofs depending on the users input.
 
 ## Contracts
