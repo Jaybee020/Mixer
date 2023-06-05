@@ -1,0 +1,6 @@
+circom
+node_modules
+artifacts
+cache
+.env
+dist

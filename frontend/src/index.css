@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Poppins", sans-serif;
+  background-color: black;
+  color: #dddddd;
+}
+
+.navBar {
+  height: 80px;
+  padding: 15px;
+  margin-left: 40px;
+  color: #dddddd;
+  font-size: larger;
+}
+
+.inputField {
+  color: #dddddd;
+}
+
+.formBox {
+  background-color: white;
+  margin-left: 35%;
+  display: block;
+  width: 450px;
+  padding: 8px 30px 30px 30px;
+  margin-top: 120px;
+  background-color: rgb(43, 43, 161);
+  border-radius: 5px;
+}
+
+.btn {
+  margin-top: 35px;
+  margin-left: 35%;
+}
+
+.info {
+  margin-left: 90px;
+  padding-top: 40px;
+  font-size: medium;
+}
+
+.link {
+  position: absolute;
+  top: 15px;
+  right: 130px;
+}
+
+.relayLink {
+  margin-left: 158px;
+  margin-top: 30px;
+}
