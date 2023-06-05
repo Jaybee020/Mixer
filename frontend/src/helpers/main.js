@@ -67,7 +67,8 @@ export async function withdrawBySelf(secret, nullifier, to) {
   const verifier = await mixer.verifier();
   console.log("Verifier is ", verifier);
   const receipt = await mixer.withdraw(to, 0, a, b, c, input);
-  return "Successfully withdrew by self with hash" + receipt.msg;
+  const txHash = await receipt.wait();
+  return "Successfully withdrew by self with hash " + txHash.transactionHash;
 }
 
 export async function withdrawwithRelayer(
