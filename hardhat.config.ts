@@ -17,7 +17,7 @@ module.exports = {
       chainId: 1337,
     },
     mainnet: {
-      url: "https://api.harmony.one", //url link for mainnet
+      url: "", //url link for mainnet
       accounts: [PRIVATE_KEY],
     },
     sepolia: {

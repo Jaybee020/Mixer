@@ -26,7 +26,26 @@ To compile the circuit
 
 ## Contracts
 
-This folder contains all contracts used for the mixer. The Verifer.sol was generated using snark js. The zkMixer contract extends both the Verifier and MerkleTree contracts. To deploy the contracts, go to the deploy.ts file in the scripts folder. Set your deposit amount in ethers and your tree depth(max is 32, but reasonable is 25 ,it should be the same value as the one in the Withdraw.circom file). A different contract is to be used for several deposit amounts. For the first deployment, the following message is logged,
+This folder contains all contracts used for the mixer. The Verifer.sol was generated using snark js. The zkMixer contract extends both the Verifier and MerkleTree contracts. To deploy the contracts,
+
+- Configure your hardhat.config.ts file,the current one there deploys to the sepolia testnet. Set your mainnet rpc url and your private key in the .env file.
+
+- Go to the deploy.ts file in the scripts folder. Set your deposit amount in ethers and your tree depth(max is 32, but reasonable is 25 ,it should be the same value as the one in the Withdraw.circom file). A different contract is to be used for several deposit amounts.
+
+To deploy the contract run the following command in the terminal
+
+```bash
+npx hardhat run --network <your-network> scripts/deploy.ts
+```
+
+For mainnet replace the your-network with mainnet, for sepolia deployment replace it with sepolia(as set in your hardhat config file). E.g
+
+```
+npx hardhat run --network mainnet scripts/deploy.js
+
+```
+
+For the first deployment, the following message is logged,
 
 ```bash
 poseidon contract deployed at  THE_DEPLOYED_ADDRESS
@@ -38,6 +57,8 @@ For further deployments,the poseidon,verifer and incremental binary tree contrac
 
 ```ts
 async function deployMixer() {
+  //uncomment for first deployment
+
   // const poseidon = await buildPoseidon();
   // const F = poseidon.F;
   // const PoseidonT3 = await ethers.getContractFactory(
