@@ -17,7 +17,7 @@ module.exports = {
       chainId: 1337,
     },
     mainnet: {
-      url: "", //url link for mainnet
+      url: "https://mainnet.infura.io/v3/", //url link for mainnet
       accounts: [PRIVATE_KEY],
     },
     sepolia: {
